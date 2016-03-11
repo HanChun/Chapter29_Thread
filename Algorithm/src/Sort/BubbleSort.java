@@ -1,4 +1,4 @@
-package MyFirst;
+package Sort;
 
 public class BubbleSort {
 	public static void bubbleSort(int[] list){

@@ -1,5 +1,9 @@
-package MyFirst;
-
+package Sort;
+/**
+ * @author HANXT
+ * @category  mergeSort/¹é²¢ÅÅÐò
+ *
+ */
 public class mergeSort {
 	public static void mergeSort(int[] list){
 	 if(list.length>1){
