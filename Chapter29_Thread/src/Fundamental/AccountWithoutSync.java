@@ -13,9 +13,19 @@ public class AccountWithoutSync {
 			executor.execute(new AddAPennyTask());
 		}
 		
-		executor.shutdown();		
-		Boolean flag = executor.isTerminated();
-		while(!flag){}
+		executor.shutdown();
+		
+		/*Boolean flag = executor.isTerminated();		
+		 *while(!flag){System.out.println("no...");}
+		 *这么写是错的，一旦没有结束就进入循环里面的话，那么就永远都跳不出来了
+		 *其不可能返回上一步给flag重新赋值！！！
+		 *你需要不停地判断isTerminated() 
+		 *进而帮助你跳出循环
+		 */	
+		
+		while(!executor.isTerminated()){}
+		
+				
 		System.out.println("what's balance ?  "+ account.getBalance());		
 	}
 	
@@ -26,6 +36,7 @@ public class AccountWithoutSync {
 		public void run() {
 			// TODO Auto-generated method stub
 			account.deposit(1);
+			
 		}
 	}
 	
@@ -36,7 +47,13 @@ public class AccountWithoutSync {
 			return balance;
 		}		
 		public void deposit(int amount){
-			balance = balance+ amount ;
+			balance = balance + amount ;
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		} 		
 	}
 }
