@@ -10,7 +10,13 @@ public class Consumer implements Runnable {
 		// TODO Auto-generated method stub
 		for(int i=0; i<20 ; i++){
 			Food fd = ss.pop();
-			System.out.println(fd);
+			System.out.println("消费了一个"+fd);
+		}		
+		try {
+			Thread.sleep((int)(Math.random())*1000 );
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }

@@ -10,5 +10,4 @@ public class ProducerConsumer {
 		new Thread(p).start();
 		new Thread(c).start();
 	}
-
 }

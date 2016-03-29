@@ -16,6 +16,7 @@ public class SyncStack {
 		}
 		this.notify();//叫醒一个正在在当前对象上等待的线程
 		arrFood[index] = food;
+		
 		index++;
 	}
 	
