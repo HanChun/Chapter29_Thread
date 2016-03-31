@@ -6,9 +6,7 @@ public class toHexadecimal {
 		// 60二进制的32位的表现形式
 		System.out.println(Integer.toBinaryString(60));
 		toHex(60);
-	}
-	
-	
+	}	
 	//十进制-->十六进制
 	public static void toHex(int num){
 		/*32位里面有几个4组，有8个，

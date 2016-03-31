@@ -3,7 +3,7 @@ package Array;
 public class toHex02 {
 	
 	public static void main(String args[]){
-		toHex(60);
+		DectoBin(10);
 	}
 	
 /* 查表法：将所有的元素临时存储起来，建立起对应关系，每一次&15后的值都作为索引去查
@@ -55,8 +55,8 @@ public class toHex02 {
 			arr[--pos] = chs[temp];
 			num = num >>>1;
 		}
-		for(int x=0 ;x<arr.length ; x++){
-			System.out.println(arr[x]);
+		for(int x=pos ;x<arr.length ; x++){
+			System.out.print(arr[x]);
 		}
 	}
 }
