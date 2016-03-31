@@ -5,7 +5,7 @@ public class Find {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = {2,4,5,7,19,32};
-		int index =halfSearch(arr,19);
+		int index =halfSearch_2(arr,50);
 		System.out.println(index);
 	}
 	
@@ -39,6 +39,22 @@ public class Find {
 		}
 		return mid;	
 	}
+	//折半的第二种方式
+	public static int halfSearch_2(int[] arr,int key){
+		int min= 0;
+		int max = arr.length-1,mid;
+		while(min<=max){
+			mid = (max+min)>>1;
+			
+			if(key>arr[mid])
+				min= mid+1;
+			else if(key < arr[mid])
+				max = mid-1;
+			else 
+				return mid;
+		}
+		return -1;
+	}	
 }
 
 
