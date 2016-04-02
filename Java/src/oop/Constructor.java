@@ -51,6 +51,13 @@ class Person{
 		age = a;
 		System.out.println("name: "+name+"age: "+a);
 	}
+	//但凡是本类功能内部用到本类对象的时候，用的都是this；
+	public boolean compare (Person p){
+			/*	if(this.age == p.age) return true;
+			else return false;*/
+		return this.age==p.age;
+		
+	}
 }
 
 public class Constructor {
