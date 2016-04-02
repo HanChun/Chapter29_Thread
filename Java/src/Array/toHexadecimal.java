@@ -18,7 +18,7 @@ public class toHexadecimal {
 			int n1 = num & 15;
 				if(n1>9)
 				  //System.out.println((char)(n1-10+'A'));
-					sb.append((char)(n1-10+'A'));
+					sb.append((char)(n1-10+'A') );
 				else
 				  //System.out.println(n1);	
 					sb.append(n1);
