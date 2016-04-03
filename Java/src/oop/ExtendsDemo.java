@@ -17,9 +17,36 @@ class Zi extends Fu{
 public class ExtendsDemo {
 
 	public static void main(String[] args) {
-		Zi z = new Zi();
+		Zi z = new Zi(); 
 		z.show();
-
 	}
-
 }
+
+
+
+class Tel{
+	void show(){
+		System.out.println("number");
+	}
+}
+/**
+ * 覆写：
+ * 1、子类覆盖父类，必须保证子类权限大于等于父类权限，才可以覆盖，否则，编译失败；
+ * 2、静态只能覆盖静态
+ *
+ */
+
+class NewTel extends Tel{
+	void show(){
+		super.show();
+		//this.show; 这就成递归了
+		System.out.println("name");
+		System.out.println("pic");
+	}
+}
+
+
+
+
+
+
