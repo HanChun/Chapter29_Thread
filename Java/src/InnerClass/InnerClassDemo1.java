@@ -3,3 +3,30 @@ package InnerClass;
 public class InnerClassDemo1 {
 
 }
+ class Body{	 
+	 private class heart{
+		 //为了方便内部类可以直接访问外部类的,为了方便内部类		 
+	 }
+	 public void show(){
+		 new heart();
+	 }
+	 
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

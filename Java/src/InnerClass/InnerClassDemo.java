@@ -23,7 +23,7 @@ class Outer{
 			int x = 6 ;//内部局部成员
 			System.out.println("Inner : "+x);//---->6
 			System.out.println("Inner : "+this.x);//---->4
-			System.out.println("Inner : "+ Outer.this.x);//---->5
+			System.out.println("Inner : "+ Outer.this.x);//---->5 此处非常重要
 		}
 	}
 	
