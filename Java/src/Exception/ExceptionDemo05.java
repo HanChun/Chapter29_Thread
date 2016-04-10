@@ -60,11 +60,12 @@ class Teacher{
 			cmpt.reset();
 		} catch (ComputerBroke e) {
 			dotest();
-			throw new NoPlanException("课时无法继续");//如果上个问题真发生了，其就直接抛出去了，不会继续执行了，so dotest()放上面
-			
+			throw new NoPlanException("课时无法继续"+e.getMessage());
+			//如果这个问题真发生了，其就直接抛出去了，不会继续执行了，so dotest()放上面
 		}
 		System.out.println("讲课");
 	}
+	
 	public void dotest(){
 		System.out.println("做练习吧。。。");
 	}

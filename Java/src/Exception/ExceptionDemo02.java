@@ -50,13 +50,11 @@ class Demo02{
 	 */
 	int div(int a ,int b) throws FuShuException{
 		if(b<0)
-			throw new FuShuException("出现了除数是负数的情况",b);//手动通过throw关键字抛出自定义异常对象
-		
+			throw new FuShuException("出现了除数是负数的情况",b);//手动通过throw关键字抛出自定义异常对象		
 		return a/b;
 	}
 }
 public class ExceptionDemo02 {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Demo02 d = new Demo02();		
@@ -68,8 +66,7 @@ public class ExceptionDemo02 {
 			// TODO Auto-generated catch block
 			System.out.println(e.toString());
 			System.out.println(e.getMessage());
-			System.out.println("除数出现负数了"+e.getValue());
-			
+			System.out.println("除数出现负数了"+e.getValue());			
 		}
 			System.out.println("over");
 	}
