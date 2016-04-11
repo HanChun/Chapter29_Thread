@@ -33,9 +33,11 @@ class Rec implements Shape{
 }
 
 class Circle implements Shape{
-	public static final PI = 3.14;
+	public static final double PI = 3.14;
 	private int radius;
 	Circle(int radius){
+		if(radius<=0)
+			throw new NoValueException("·Ç·¨");
 		this.radius = radius;
 	}
 	@Override

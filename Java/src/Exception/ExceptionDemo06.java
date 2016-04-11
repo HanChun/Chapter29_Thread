@@ -23,7 +23,9 @@ public class ExceptionDemo06 {
 			System.out.println("x="+x);
 		} catch (FuShuException06 e) {
 			System.out.println(e.toString());
-			return;//若出现异常，希望程序在这里可以结束；输出over就不执行了
+			//return;//若出现异常，希望程序在这里可以结束；输出over就不执行了
+			System.exit(0);
+			//在这种情况下，finally是读不到的，因为系统里面有一个静态方法叫作exit，系统，退出，jvm结束
 		}finally{
 			System.out.println("fianlly");//finally中存放的是一定会被执行的代码
 		}
