@@ -1,5 +1,6 @@
 package ThreadAgain;
-/*多线程多生产者要用while循环，但是用了while产生全部等待
+/*
+ * 多线程多生产者要用while循环，但是用了while产生全部等待
  * notify()往往唤醒线程池中的第一个
  */
 public class ProducerConsumerDemo {
