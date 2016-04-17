@@ -76,7 +76,8 @@ public class CollectionDemo02 {
 		{
 			Object obj = it.next(); 
 			if(obj.equals("java02"))
-				//al.add("java008");
+				//al.add("java008");报错：并发修改异常，
+				//不能用同两种方式：一种迭代器，一种数组，去同时修改异常；
 				it.remove();
 			sop(obj);
 		}
