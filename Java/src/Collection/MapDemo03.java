@@ -2,6 +2,7 @@ package Collection;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
 
 class Student implements Comparable<Student>{
@@ -43,15 +44,12 @@ class Student implements Comparable<Student>{
 		if(num==0)
 			return this.name.compareTo(s.name);
 		return num;	
-	}
-	
-	
+	}	
 }
 
 
 
 public class MapDemo03 {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		HashMap<Student,String> hm = new HashMap<Student,String>();
@@ -69,8 +67,14 @@ public class MapDemo03 {
 			System.out.println(stu +".."+addr);
 		}
 		
+		Set<Map.Entry<Student, String>> entrySet = hm.entrySet();
+		Iterator<Map.Entry<Student, String>> it1 = entrySet.iterator();
+		while(it1.hasNext()){
+			Map.Entry<Student, String> me = it1.next();
+			Student stu = me.getKey();
+			String addr = me.getValue();
+		}
 	}
-
 }
 
 
