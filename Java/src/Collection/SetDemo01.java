@@ -9,6 +9,8 @@ import java.util.Iterator;
  * 		|---TreeSet:
  * 实现子类：
  * AbstractSet ,LinkedSet,TreeSet,LinkedHashSet......
+ * 
+ * 注意，判断元素是否存在，以及删除等操作，依赖的是元素的hashcode和equals方法
  */
 class Demo{
 	public int hashCode(){
@@ -28,6 +30,16 @@ class Person01{//person自带equals方法，继承自object
 	public int getAge(){
 		return age;
 	}
+	public int hashCode(){
+		System.out.println(this.name+"....hashCode");
+		return name.hashCode() +age;
+	}
+	public boolean equals(Object obj){
+		if(!(obj instanceof Person01))
+			return false;
+		Person01 p = (Person01)obj;
+		return this.name.equals(p.name)&& this.age ==p.age;
+	} 
 }
 public class SetDemo01 {
 	public static void sop(Object obj){
@@ -62,10 +74,7 @@ public class SetDemo01 {
 		Iterator it = hs.iterator();
 		while(it.hasNext()){
 			sop(it.next());
-		}*/
-		
-		
-		
+		}
+*/
 	}
-
 }
