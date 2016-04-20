@@ -2,6 +2,7 @@ package Collection;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
 /*
  * 
@@ -37,6 +38,14 @@ public class MapDemo05 {
 			String name = roomMap.get(id);
 			System.out.println(id+":"+name);
 		}		
+	}
+
+	public static void getInfos(List<Student> list){
+		Iterator<Student> it = list.iterator();
+		while(it.hasNext()){
+			Student s = it.next();
+			System.out.println(s);
+		}
 	}
 }
 
