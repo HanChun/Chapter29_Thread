@@ -6,12 +6,12 @@ class B extends A{}
 
 class C extends B{}
 
-public class ClassDemo06 {
+public class classDemo06 {
 	public static void Hierarchy(Object o){
 		
 		if(o.getClass().getSuperclass()!=null){
-			
-			System.out.println(o.getClass() + "is a subclass of" + o.getClass().getSuperclass());
+			//getSuperclass() 是返回上一级的父类
+			System.out.println(o.getClass() + " is a subclass of " + o.getClass().getSuperclass());
 			
 			try {
 				Hierarchy( o.getClass().getSuperclass().newInstance() );
@@ -25,8 +25,33 @@ public class ClassDemo06 {
 		}
 	}
 	
-	public static void main(Object o) {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Hierarchy(new C());
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
