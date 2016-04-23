@@ -1,5 +1,4 @@
 package ReflectApp;
-
 public class MouseByUSB implements USB {
 
 	@Override

@@ -26,15 +26,18 @@ public class NoteBookMain {
 		prop.load(fr);
 		
 		for(int x = 1; x<=prop.size(); x++){
+			 System.out.println(x);
 			 String className = prop.getProperty("usb"+x);
-			 Class clazz = Class.forName(className);
+			 System.out.println(className);
+			 
+			 Class clazz= Class.forName(className);
 			 USB usb = (USB)clazz.newInstance();
-			 book.useUSB(usb);			 
+			 book.useUSB(usb);
+			 		 
 		}		
 		fr.close();
 	}
 }
-
 
 
 

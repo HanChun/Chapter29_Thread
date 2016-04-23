@@ -23,15 +23,16 @@ class Person{
 
 public class Demo01 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		Person p1 = new Person();
+		/*Person p1 = new Person();
 		Person p2 = new Person();
 		
 		Class clazz1 = p1.getClass();
 		Class clazz2 = p2.getClass();
 		
-		System.out.println(clazz1==clazz2);
+		System.out.println(clazz1==clazz2);*/
+		getClass_3();
 	}
 	
 	public static void getClass_1(){
@@ -52,5 +53,4 @@ public class Demo01 {
 			e.printStackTrace();
 		}		
 	}
-
 }
