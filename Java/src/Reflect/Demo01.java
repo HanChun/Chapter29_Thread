@@ -11,7 +11,16 @@ class Person{
 		this.name = name;
 		this.age = age;
 	}
+	public void show(String name,int age){
+		System.out.println("show run... name="+name+"... age = "+age);
+	}
+	public static void staticshow(){
+		System.out.println("static show run");
+	}
 }
+
+
+
 public class Demo01 {
 
 	public static void main(String[] args) {
