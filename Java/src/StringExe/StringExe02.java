@@ -16,9 +16,9 @@ public class StringExe02 {
 		int x=0;
 		int num=0;
 		int index = 0;
-		while(x>=0){
-			 x = str.indexOf(key,index);
-			index = index+str.length();
+		while(x >=0){
+			x = str.indexOf(key,index);//记录返回下标，也记录是否有值
+			index = x+key.length();
 			num++;
 		}
 		return num-1;
