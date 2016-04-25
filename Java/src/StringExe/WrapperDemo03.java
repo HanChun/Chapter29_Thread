@@ -3,15 +3,17 @@ package StringExe;
 import java.util.Arrays;
 
 public class WrapperDemo03{
+	private static final String SPACE = " ";
+	
 	public static void main (String[] args){
 		String str = "23 9 -4 18 100 7";
 		str = sortNumString(str);
-		System.out.println("nums " + str);
+		System.out.println("nums = " + str);
 	}
 
 	private static String sortNumString(String str) {
 		//1、变成了字符串数组
-		String[] str1= str.split(" ");
+		String[] str1= str.split(SPACE);
 		
 		//2、字符串数组变成数组
 		int[] a =parseIntArray(str1);
@@ -27,8 +29,10 @@ public class WrapperDemo03{
 		//把一个整数数组变字符串
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i< a.length ;i++ ){
-			if(i!=nums.length-1){
-				sb.append(nums[i]+" ");
+			if(i!=a.length-1){
+				sb.append(a[i]+" ");
+			}else{
+				sb.append(a[i]);
 			}
 		}
 		return sb.toString();
