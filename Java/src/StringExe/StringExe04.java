@@ -10,6 +10,7 @@ public class StringExe04 {
 		sb.insert(2, "it");
 		sb.delete(2, 3);
 		String s = sb.toString();
+		sb.reverse();
 		System.out.println(sb);
 	}
 
